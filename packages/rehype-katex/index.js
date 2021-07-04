@@ -1,5 +1,7 @@
 const visit = require('unist-util-visit')
-const katex = require('katex').renderToString
+const katex_ = require('katex');
+require('katex/dist/contrib/mhchem.js');
+const katex = katex_.renderToString
 const unified = require('unified')
 const parse = require('rehype-parse')
 const toText = require('hast-util-to-text')
